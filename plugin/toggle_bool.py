@@ -1,4 +1,4 @@
-values = {
+VALUES = {
     'true': 'false',
     'on': 'off',
     'yes': 'no',
@@ -16,12 +16,12 @@ def format_value(word, toggleWord):
 
 def toggle_bool_value(word):
     toggleWord = word
-    for key in values.keys():
+    for key in VALUES.keys():
         if key == word.lower():
-            toggleWord = values[key]
+            toggleWord = VALUES[key]
             toggleWord = format_value(word, toggleWord)
             break
-        elif values[key] == word.lower():
+        elif VALUES[key] == word.lower():
             toggleWord = key
             toggleWord = format_value(word, toggleWord)
             break
