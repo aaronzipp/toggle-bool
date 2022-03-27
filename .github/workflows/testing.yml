@@ -26,6 +26,6 @@ jobs:
     - name: move to the python dir
       run: cd python
     - name: check flake8
-      run: python -m flake8
+      run: flake8
     - name: run tests
-      run: python -m pytest
+      run: pytest
