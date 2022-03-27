@@ -7,7 +7,7 @@ let s:plugin_root_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 " --------------------------------
 "  Function(s)
 " --------------------------------
-function! TemplateExample()
+function! ToggleBool()
 python3 << endOfPython
 
 import sys
@@ -36,7 +36,7 @@ endfunction
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! ToggleBool call TemplateExample()
+command! ToggleBool call ToggleBool()
 
 " key mapping
 " noremap <leader>r :ToggleBool<CR>
