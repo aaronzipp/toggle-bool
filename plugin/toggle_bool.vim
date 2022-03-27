@@ -26,8 +26,8 @@ if len(word_under_cursor):
   # get the toggle value of word under cursor
   toggle_value = toggle_bool_value(word_under_cursor)
 
-  # replace the current word with new toggled value
-  vim.command('normal viwc%s' % toggle_value)
+  # replace the current word with new toggled value and let the cursor stay in postion
+  vim.command('s/%s/%s/ | call setpos(\'.\', getpos("\'\'"))' % (word_under_cursor, toggle_value))
 
 endOfPython
 endfunction
