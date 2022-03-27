@@ -1,5 +1,7 @@
 # toggle-bool
 
+[![Code Checks](https://github.com/aaronzipp/toggle-bool/actions/workflows/testing.yml/badge.svg?branch=master)](https://github.com/aaronzipp/toggle-bool/actions/workflows/testing.yml)
+
 Vim plugin to toggle boolean values.
 
 
