@@ -28,7 +28,6 @@ if len(word_under_cursor):
 
   # replace the current word with new toggled value
   vim.command('normal viwc%s' % toggle_value)
-  vim.command('normal b')
 
 endOfPython
 endfunction
