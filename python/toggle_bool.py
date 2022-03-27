@@ -6,23 +6,23 @@ VALUES = {
 }
 
 
-def format_value(word, toggleWord):
+def format_value(word, toggle_word):
     if word.isupper():
-        toggleWord = toggleWord.upper()
+        toggle_word = toggle_word.upper()
     elif word.istitle():
-        toggleWord = toggleWord.title()
-    return toggleWord
+        toggle_word = toggle_word.title()
+    return toggle_word
 
 
 def toggle_bool_value(word):
-    toggleWord = word
+    toggle_word = word
     for key in VALUES.keys():
         if key == word.lower():
-            toggleWord = VALUES[key]
-            toggleWord = format_value(word, toggleWord)
+            toggle_word = VALUES[key]
+            toggle_word = format_value(word, toggle_word)
             break
         elif VALUES[key] == word.lower():
-            toggleWord = key
-            toggleWord = format_value(word, toggleWord)
+            toggle_word = key
+            toggle_word = format_value(word, toggle_word)
             break
-    return toggleWord
+    return toggle_word

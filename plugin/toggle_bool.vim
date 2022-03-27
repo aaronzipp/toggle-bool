@@ -20,14 +20,14 @@ sys.path.insert(0, python_root_dir)
 from toggle_bool import toggle_bool_value
 
 # get word under cursor
-wordUnderCursor = vim.eval('expand("<cword>")')
+word_under_cursor = vim.eval('expand("<cword>")')
 
-if len(wordUnderCursor):
+if len(word_under_cursor):
   # get the toggle value of word under cursor
-  toggleValue = toggle_bool_value(wordUnderCursor)
+  toggle_value = toggle_bool_value(word_under_cursor)
 
   # replace the current word with new toggled value
-  vim.command('normal viwc%s' % toggleValue)
+  vim.command('normal viwc%s' % toggle_value)
   vim.command('normal b')
 
 endOfPython
