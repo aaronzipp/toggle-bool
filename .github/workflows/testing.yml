@@ -22,10 +22,10 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: install testing dependencies
-      run: python -m pip install flake8 pytest
+      run: pip3 install flake8 pytest
     - name: move to the python dir
       run: cd python
     - name: check flake8
       run: flake8
     - name: run tests
-      run: pytest
+      run: python -m pytest
