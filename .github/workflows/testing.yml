@@ -23,9 +23,9 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: install testing dependencies
       run: pip3 install flake8 pytest
-    - name: move to the python dir
-      run: cd python
     - name: check flake8
+      working-directory: ./python
       run: flake8
     - name: run tests
+      working-directory: ./python
       run: python -m pytest
