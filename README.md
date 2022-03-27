@@ -5,10 +5,10 @@ Vim plugin to toggle boolean values.
 
 ## List of boolean values supported
 
-- true <-> false 
-- yes <-> no 
-- on <-> off
-- 0 <-> 1
+- true &harr; false 
+- yes &harr; no 
+- on &harr; off
+- 0 &harr; 1
 
 
 ## Installation
@@ -34,9 +34,3 @@ To invoke you need to call `:ToggleBool`. You can map accordingly.
 For example, to map to `<leader>r` you need to add following to your *.vimrc*
 
     noremap <leader>r :ToggleBool<CR>
-
-## Todo
-
-1. When word is replaced with the toggled value, it eats leading and trailing
-   spaces.
-2. Support more for more values and logical operators.
