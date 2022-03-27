@@ -8,10 +8,10 @@ VALUES = {
 
 def format_value(word, toggle_word):
     if word.isupper():
-        toggle_word = toggle_word.upper()
-    elif word.istitle():
-        toggle_word = toggle_word.title()
-    return toggle_word
+        return toggle_word.upper()
+    if word.istitle():
+        return toggle_word.title()
+    return toggle_word.lower()
 
 
 def toggle_bool_value(word):
