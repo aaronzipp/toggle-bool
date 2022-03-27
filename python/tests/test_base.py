@@ -1,5 +1,5 @@
 import toggle_bool
-import pytest # noqa
+import pytest  # noqa
 from enum import Enum
 
 

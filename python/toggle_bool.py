@@ -1,8 +1,8 @@
 VALUES = {
-    'true': 'false',
-    'on': 'off',
-    'yes': 'no',
-    '1': '0',
+    "true": "false",
+    "on": "off",
+    "yes": "no",
+    "1": "0",
 }
 
 
