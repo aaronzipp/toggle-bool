@@ -8,7 +8,7 @@ let s:plugin_root_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 "  Function(s)
 " --------------------------------
 function! ToggleBool()
-python3 << endOfPython
+python3 << EOF
 
 import sys
 from os.path import normpath, join
@@ -29,7 +29,7 @@ if len(word_under_cursor):
   # replace the current word with new toggled value and let the cursor stay in postion
   vim.command('s/%s/%s/ | call setpos(\'.\', getpos("\'\'"))' % (word_under_cursor, toggle_value))
 
-endOfPython
+EOF
 endfunction
 
 " --------------------------------
