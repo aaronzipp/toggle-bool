@@ -1,3 +1,8 @@
+if !has("python3")
+  echo "vim has to be compiled with +python3 to run this"
+  finish
+endif
+
 let s:plugin_root_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 " --------------------------------
