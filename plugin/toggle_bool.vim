@@ -1,11 +1,7 @@
-" --------------------------------
-" Add our plugin to the path
-" --------------------------------
-
 let s:plugin_root_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
 " --------------------------------
-"  Function(s)
+"  Function
 " --------------------------------
 function! ToggleBool()
 python3 << EOF
@@ -24,12 +20,14 @@ def change_bool():
     # get word under cursor
     word_under_cursor = vim.eval('expand("<cword>")')
 
+
     if len(word_under_cursor) == 0:
         return
 
     # get the toggle value of word under cursor
     toggle_value = toggle_bool_value(word_under_cursor)
 
+    # only replace the word if it was toggled
     if toggle_value is word_under_cursor:
         return
 
@@ -47,5 +45,3 @@ endfunction
 " --------------------------------
 command! ToggleBool call ToggleBool()
 
-" key mapping
-" noremap <leader>r :ToggleBool<CR>
